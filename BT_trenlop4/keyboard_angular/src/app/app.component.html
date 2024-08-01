@@ -1,0 +1,44 @@
+<div class="container">
+  <h1>Fast Fingers Typing Game</h1>
+  <div id="game">
+    <p id="word" #wordDisplay>Press Start to Begin</p>
+    <input type="text" id="input" placeholder="Type here..." (keyup)="handleKeyPress($event)" #input disabled>
+    <button id="start" (click)="startGame()" #startButton>Start</button>
+    <p>Time left: {{ timeLeft }} seconds</p>
+    <p *ngIf="wpm !== null">WPM: {{ wpm }}</p>
+  </div>
+  <div class="keyboard" #keys>
+    <div class="row">
+      <div class="key" data-key="q"><span>Q</span></div>
+      <div class="key" data-key="w"><span>W</span></div>
+      <div class="key" data-key="e"><span>E</span></div>
+      <div class="key" data-key="r"><span>R</span></div>
+      <div class="key" data-key="t"><span>T</span></div>
+      <div class="key" data-key="y"><span>Y</span></div>
+      <div class="key" data-key="u"><span>U</span></div>
+      <div class="key" data-key="i"><span>I</span></div>
+      <div class="key" data-key="o"><span>O</span></div>
+      <div class="key" data-key="p"><span>P</span></div>
+    </div>
+    <div class="row">
+      <div class="key" data-key="a"><span>A</span></div>
+      <div class="key" data-key="s"><span>S</span></div>
+      <div class="key" data-key="d"><span>D</span></div>
+      <div class="key" data-key="f"><span>F</span></div>
+      <div class="key" data-key="g"><span>G</span></div>
+      <div class="key" data-key="h"><span>H</span></div>
+      <div class="key" data-key="j"><span>J</span></div>
+      <div class="key" data-key="k"><span>K</span></div>
+      <div class="key" data-key="l"><span>L</span></div>
+    </div>
+    <div class="row">
+      <div class="key" data-key="z"><span>Z</span></div>
+      <div class="key" data-key="x"><span>X</span></div>
+      <div class="key" data-key="c"><span>C</span></div>
+      <div class="key" data-key="v"><span>V</span></div>
+      <div class="key" data-key="b"><span>B</span></div>
+      <div class="key" data-key="n"><span>N</span></div>
+      <div class="key" data-key="m"><span>M</span></div>
+    </div>
+  </div>
+</div>
